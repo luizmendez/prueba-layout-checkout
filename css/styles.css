@@ -1,0 +1,509 @@
+/* Font Imported from Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+/**** STRUCTURE ****/
+body {
+    font: 400 14px 'Lato', sans-serif;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    padding: 0 5px 10px 5px; 
+    position: relative;
+    -webkit-box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+    box-shadow: 0 0 5px 3px rgba(0,0,0,0.3);
+}
+    header .logo h1 {
+        font: bold 28px 'Lato', sans-serif;
+        margin: 0;
+    }
+    header .logo img {
+        height: 60px;
+        margin-right: 20px;
+        vertical-align: baseline;
+        position: relative;
+        top: 8px;
+    }
+    header .menu img {
+        position: relative;
+        top: 10px;
+    }
+
+main {
+    flex: 1;
+    padding: 20px 0;
+    background: #EEEEEE url(../img/doodles.png) repeat top left;
+}
+    main .main-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+footer {
+    padding: 20px 5px;
+    min-height: 60px;
+    background: #4C4C4C;
+    color: #FFFFFF;
+}
+    footer .footer-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+.wrapper {
+    width: 95%;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.left-col {
+    width: 66.66%;
+}
+.right-col {
+    width: 33.33%;
+}
+
+/**** ELEMENTS ****/
+a {
+    color: inherit;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+img {
+    max-width: 100%;
+}
+
+h2 {
+
+}
+h3 {
+
+}
+input[type="text"],
+input[type="email"],
+input[type="number"],
+textarea {
+    display: block;
+    padding: 3px 5px;
+    border: 1px solid #DDDDDD;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* Reusable Classes */
+
+.flex-center-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.border-section {
+    background: #FFFFFF;
+    padding: 10px 20px;
+    border: 1px solid #DDDDDD;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+.section-header {
+    border-bottom: 1px solid #DDDDDD;
+}
+    .section-header h2 {
+        margin: 5px 0;
+    }
+
+.reset-btn {
+    visibility: hidden;
+}
+    .reset-btn.active {
+        visibility: visible;
+    }
+
+/**** SECTIONS ****/
+
+/* Order */
+.order-container {
+    width: 90%;
+    margin: 0 auto;
+}
+    .oc-items-wrapper {
+
+    }
+    .oc-item {
+        padding: 5px;
+        border-bottom: 2px solid #DDDDDD;
+        position: relative;
+        opacity: 1;
+        transition: opacity 0.3s ease-out;
+    }
+        .oc-item.disabled {
+            opacity: 0.4;
+        }
+    .oci-info {
+        width: 83.33%;
+        padding-right: 15px;
+    }
+    .oci-quantity {
+        width: 16.66%;
+        padding: 5px;
+        background: #FAFAFA;
+    }
+        .oci-quantity h3 {
+            margin: 0 0 5px 0;
+            text-align: center;
+        }
+        .oci-quantity .oci-quantity-controller {
+            padding: 10px 0;
+            text-align: center;
+        }
+            .oci-quantity-controller span {
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .oci-quantity-less,
+            .oci-quantity-more {
+                width: 15px;
+                height: 15px;
+                line-height: 15px;
+                text-align: center;
+                display: inline-block;
+                background: #666666;
+                color: #FFFFFF;
+            }
+        .oci-quantity .oci-total-price p {
+            text-align: center;
+            margin: 5px 0;
+        }
+    .oc-total h3 {
+       text-align: right; 
+       margin: 20px 5px 10px;
+    }
+        .oc-total h3 span {
+            width: 16.66%;
+            display: inline-block;
+            margin-left: 20px;
+            font-size: 18px;
+        }
+
+/* Info */
+.info-container {
+    width: 90%;
+    margin: 30px auto;
+    align-items: flex-start;
+}
+
+/* User Data */
+.ic-user {
+    width: 45%;
+}
+    .ic-user .icu-info > div {
+        margin: 15px 0;
+    }
+    .ic-user .icu-info > div strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .ic-user .icu-info > div span {
+        display: block;
+    }
+    .ic-user .icu-info > div span.hidden {
+        display: none;
+    }
+    .ic-user .icu-info > div input {
+        width: 100%;
+        display: none;
+    }
+    .ic-user .icu-info > div input.active {
+        display: block;
+    }
+    .ic-user .icu-info > div a {
+        display: block;
+        text-align: right;
+        margin: 5px 0 0 0;
+        color: #0000FF;
+        text-decoration: underline;
+    }
+    .ic-user .icu-info > div a::after {
+        content: 'Modificar';
+    }
+    .ic-user .icu-info > div a.active::after {
+        content: 'Aceptar';
+    }
+
+
+/* Payment */
+.ic-payment {
+    width: 51%;
+}
+    .icp-payment {
+        padding: 5px 0;
+        border-bottom: 2px solid #DDDDDD;
+    }
+        .icp-payment-header {
+            font-size: 18px;
+            font-weight: bold;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+        .icp-payment-header.active {
+            background-color: #DDDDDD;
+        }
+            .icp-icon {
+                width: 50px;
+                height: 30px;
+                margin-right: 10px;
+                display: inline-block;
+                background: url() no-repeat center center;
+                background-size: contain;
+            }
+            .icp-icon.icn-nopay { background-image: url(../img/cross.png) }
+            .icp-icon.icn-oxxo { background-image: url(../img/oxxo.png) }
+            .icp-icon.icn-creditcard { background-image: url(../img/credit-card.png) }
+            .icp-icon.icn-amex { background-image: url(../img/cc-amex.png) }
+            .icp-icon.icn-visa { background-image: url(../img/cc-visa.png) }
+            .icp-icon.icn-mastercard { background-image: url(../img/cc-mastercard.png) }
+            .icp-icon.icn-paypal { background-image: url(../img/paypal.png) }
+            .icp-icon.icn-cash { background-image: url(../img/banknote.png) }
+
+        .cc-payment-data {
+            display: none;
+            margin-bottom: 10px;
+        }
+        .cc-payment-data.active {
+            display: block;
+        }
+            .cc-form  {
+            }
+                .ccf-left,
+                .ccf-right {
+                    width: 60%;
+                    padding: 5px;
+                }
+                .ccf-right {
+                    width: 40%;
+                }
+                .cc-form label {
+                    display: block;
+                    margin-bottom: 3px;
+                }
+                .cc-date-cvc {
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                }
+                    .cc-date {
+                        margin-right: 20px;
+                    }
+                    .cc-date-selects {
+                        display: flex;
+                        align-items: center;
+                    }
+                    .cc-date-selects > div {
+                        display: inline-block;
+                        width: 60px;
+                        height: 24px;
+                        overflow: hidden;
+                        position: relative;
+                        border: 1px solid #DDDDDD;
+                        -webkit-border-radius: 3px;
+                        border-radius: 3px;
+                    }
+                    .cc-date-selects > div::before {
+                        content: "";
+                        display: block;
+                        width: 8px;
+                        height: 23px;
+                        background: url(../img/caret-down.png) no-repeat center center;
+                        background-size: contain;
+                        position: absolute;
+                        top: 0;
+                        right: 5px;
+                        z-index: 1;
+                    }
+                        .cc-date-selects > div select {
+                            background: transparent;
+                            border: none;
+                            width: 75px;
+                            height: 23px;
+                            position: relative;
+                            z-index: 2;
+                        }
+                    .cc-date-selects span {
+                        display: inline-block;
+                        line-height: 24px;
+                        margin: 0 5px;
+                    }
+                    .ccf-cvc {
+                        width: 50px;
+                    }
+
+/* Summary */
+.summary-container {
+
+}
+    .sc-header .sc-cart-icon {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background: url(../img/cart.png) no-repeat center center;
+        background-size: contain;
+    }
+    .sc-order {
+        margin: 10px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid #DDDDDD;
+    }
+        .sc-items {
+            padding: 8px 3px;
+            background: #FAFAFA;
+        }
+        .sc-items ul {
+            text-decoration: none;
+            margin: 0;
+            padding: 0;
+        }
+            .sc-items li {
+                margin: 5px 0;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .sc-items span {
+                display: inline-block;
+            }
+            .sc-items .sci-quantity {
+                width: 4.7% 
+            }
+            .sc-items .sci-desc {
+                width: 70%; 
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+            .sc-items .sci-price {
+                width: 21%;
+                text-align: right;
+            }
+        .sc-total {
+            margin: 5px 0;
+            text-align: right;
+        }
+            .sc-total strong {
+                font-size: 18px;
+                display: inline-block;
+                margin-left: 20px;
+            }
+    .sc-user {
+        margin: 10px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid #DDDDDD;
+    }
+        .sc-user h3 {
+            margin: 5px 0;
+        }
+        .sc-user p {
+            margin: 8px 0;
+        }
+        .sc-user p strong,
+        .sc-user p span {
+            display: block;
+        }
+    .sc-payment {
+        margin: 10px 0;
+        padding: 5px 0;
+        border-bottom: 2px solid #DDDDDD;
+    }
+        .sc-payment h3 {
+            margin: 5px 0;
+        }
+        .sc-payment div {
+            margin: 8px 0;
+            display: flex;
+            align-items: center;
+        }
+            .sc-payment .icp-icon {
+                width: 40px;
+                height: 20px;
+            }
+    .sc-place-order-btn {
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+        .sc-place-order-btn a {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            text-align: center;
+            color: #FFFFFF;
+            background: #b70e0e;
+            position: relative;
+            opacity: 1;
+            transition: background 0.2s ease-out,
+                        opacity 0.3s ease-out;
+        }
+        .sc-place-order-btn a:hover {
+            background: #841313;
+        }
+        .sc-place-order-btn a.disabled:hover {
+            background: #b70e0e;
+        }
+        .sc-place-order-btn a.disabled {
+            opacity: 0.4;
+        }
+
+
+/**** MEDIA QUERIES ****/
+
+@media only screen and (max-device-width : 680px) {
+
+    main .main-content {
+        flex-direction: column;
+    }
+
+    .left-col,
+    .right-col {
+        width: 100%;
+    }
+
+    .order-container,
+    .ic-user,
+    .ic-payment,
+    .summary-container {
+        width: 100%;
+        margin: 15px auto;
+    }
+        .oci-info {
+            width: 60%;
+        }
+        .oci-quantity,
+        .oc-total h3 span {
+            width: 40%;
+        }
+
+    .info-container {
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+    }
+}
