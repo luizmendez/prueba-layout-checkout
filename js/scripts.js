@@ -123,7 +123,9 @@ $(document).ready(function() {
             // Check Complete User Info
             if (
                 $('.icu-info > div a').hasClass('active') ||
-                $('.icu-info > div span').html().length < 5
+                $('.icu-name span').html().length < 5 ||
+                $('.icu-address span').html().length < 5 ||
+                $('.icu-phone span').html().length < 5
             ) {
                 $('.sc-place-order-btn a').addClass('disabled');
                 return;
